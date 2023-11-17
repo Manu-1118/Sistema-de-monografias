@@ -1,0 +1,12 @@
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\bin\Debug\CapaDatos1.dll
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\bin\Debug\CapaDatos1.pdb
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\obj\Debug\CapaDatos1.dll
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\obj\Debug\CapaDatos1.pdb
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\bin\Debug\CapaDatos1.dll.config
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\bin\Debug\EntityFramework.dll
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\bin\Debug\EntityFramework.xml
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaDatos1\obj\Debug\CapaDatos.csproj.CopyComplete

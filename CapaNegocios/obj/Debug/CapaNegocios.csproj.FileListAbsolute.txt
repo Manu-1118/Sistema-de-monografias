@@ -1,0 +1,15 @@
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\bin\Debug\CapaNegocios.dll
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\bin\Debug\CapaNegocios.pdb
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\bin\Debug\CapaDatos1.dll
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\bin\Debug\CapaDatos1.pdb
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\obj\Debug\CapaNegocios.csproj.AssemblyReference.cache
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\obj\Debug\CapaNegocios.csproj.CoreCompileInputs.cache
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\obj\Debug\CapaNegocios.csproj.CopyComplete
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\obj\Debug\CapaNegocios.dll
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\obj\Debug\CapaNegocios.pdb
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\bin\Debug\CapaDatos1.dll.config
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\bin\Debug\CapaNegocios.dll.config
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\bin\Debug\EntityFramework.dll
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\bin\Debug\EntityFramework.xml
+C:\Users\Zetas\Documents\Proyectos\AED\Sistema_Bibliotecario\CapaNegocios\bin\Debug\EntityFramework.SqlServer.xml

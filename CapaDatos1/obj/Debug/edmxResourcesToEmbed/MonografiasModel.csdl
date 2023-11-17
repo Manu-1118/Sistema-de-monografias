@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbmonografiasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Autor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rol" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AutorMonografia" Relationship="Self.FK__AutorMono__IdAut__3D5E1FD2" FromRole="Autor" ToRole="AutorMonografia" />
+  </EntityType>
+  <EntityType Name="AutorMonografia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdAutor" Type="Int32" Nullable="false" />
+    <Property Name="IdMonografia" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Autor" Relationship="Self.FK__AutorMono__IdAut__3D5E1FD2" FromRole="AutorMonografia" ToRole="Autor" />
+    <NavigationProperty Name="Monografia" Relationship="Self.FK__AutorMono__IdMon__3E52440B" FromRole="AutorMonografia" ToRole="Monografia" />
+  </EntityType>
+  <EntityType Name="Lector">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CargoAtraso" Type="Int32" />
+    <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__IdLect__4222D4EF" FromRole="Lector" ToRole="Prestamo" />
+  </EntityType>
+  <EntityType Name="Monografia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Universidad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AutorMonografia" Relationship="Self.FK__AutorMono__IdMon__3E52440B" FromRole="Monografia" ToRole="AutorMonografia" />
+    <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__IdMono__412EB0B6" FromRole="Monografia" ToRole="Prestamo" />
+  </EntityType>
+  <EntityType Name="Prestamo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdMonografia" Type="Int32" Nullable="false" />
+    <Property Name="IdLector" Type="Int32" Nullable="false" />
+    <Property Name="FechaPrestamo" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FechaDevolucion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FechaEntrega" Type="DateTime" Precision="0" />
+    <Property Name="Nota" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Lector" Relationship="Self.FK__Prestamo__IdLect__4222D4EF" FromRole="Prestamo" ToRole="Lector" />
+    <NavigationProperty Name="Monografia" Relationship="Self.FK__Prestamo__IdMono__412EB0B6" FromRole="Prestamo" ToRole="Monografia" />
+  </EntityType>
+  <Association Name="FK__AutorMono__IdAut__3D5E1FD2">
+    <End Role="Autor" Type="Self.Autor" Multiplicity="1" />
+    <End Role="AutorMonografia" Type="Self.AutorMonografia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AutorMonografia">
+        <PropertyRef Name="IdAutor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AutorMono__IdMon__3E52440B">
+    <End Role="Monografia" Type="Self.Monografia" Multiplicity="1" />
+    <End Role="AutorMonografia" Type="Self.AutorMonografia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Monografia">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AutorMonografia">
+        <PropertyRef Name="IdMonografia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamo__IdLect__4222D4EF">
+    <End Role="Lector" Type="Self.Lector" Multiplicity="1" />
+    <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lector">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Prestamo">
+        <PropertyRef Name="IdLector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamo__IdMono__412EB0B6">
+    <End Role="Monografia" Type="Self.Monografia" Multiplicity="1" />
+    <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Monografia">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Prestamo">
+        <PropertyRef Name="IdMonografia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbmonografiasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Autor" EntityType="Self.Autor" />
+    <EntitySet Name="AutorMonografia" EntityType="Self.AutorMonografia" />
+    <EntitySet Name="Lector" EntityType="Self.Lector" />
+    <EntitySet Name="Monografia" EntityType="Self.Monografia" />
+    <EntitySet Name="Prestamo" EntityType="Self.Prestamo" />
+    <AssociationSet Name="FK__AutorMono__IdAut__3D5E1FD2" Association="Self.FK__AutorMono__IdAut__3D5E1FD2">
+      <End Role="Autor" EntitySet="Autor" />
+      <End Role="AutorMonografia" EntitySet="AutorMonografia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AutorMono__IdMon__3E52440B" Association="Self.FK__AutorMono__IdMon__3E52440B">
+      <End Role="Monografia" EntitySet="Monografia" />
+      <End Role="AutorMonografia" EntitySet="AutorMonografia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamo__IdLect__4222D4EF" Association="Self.FK__Prestamo__IdLect__4222D4EF">
+      <End Role="Lector" EntitySet="Lector" />
+      <End Role="Prestamo" EntitySet="Prestamo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamo__IdMono__412EB0B6" Association="Self.FK__Prestamo__IdMono__412EB0B6">
+      <End Role="Monografia" EntitySet="Monografia" />
+      <End Role="Prestamo" EntitySet="Prestamo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbmonografiasModelStoreContainer" CdmEntityContainer="dbmonografiasEntities">
+    <EntitySetMapping Name="Autor">
+      <EntityTypeMapping TypeName="dbmonografiasModel.Autor">
+        <MappingFragment StoreEntitySet="Autor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutorMonografia">
+      <EntityTypeMapping TypeName="dbmonografiasModel.AutorMonografia">
+        <MappingFragment StoreEntitySet="AutorMonografia">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdAutor" ColumnName="IdAutor" />
+          <ScalarProperty Name="IdMonografia" ColumnName="IdMonografia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lector">
+      <EntityTypeMapping TypeName="dbmonografiasModel.Lector">
+        <MappingFragment StoreEntitySet="Lector">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="CargoAtraso" ColumnName="CargoAtraso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monografia">
+      <EntityTypeMapping TypeName="dbmonografiasModel.Monografia">
+        <MappingFragment StoreEntitySet="Monografia">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Universidad" ColumnName="Universidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prestamo">
+      <EntityTypeMapping TypeName="dbmonografiasModel.Prestamo">
+        <MappingFragment StoreEntitySet="Prestamo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdMonografia" ColumnName="IdMonografia" />
+          <ScalarProperty Name="IdLector" ColumnName="IdLector" />
+          <ScalarProperty Name="FechaPrestamo" ColumnName="FechaPrestamo" />
+          <ScalarProperty Name="FechaDevolucion" ColumnName="FechaDevolucion" />
+          <ScalarProperty Name="FechaEntrega" ColumnName="FechaEntrega" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
